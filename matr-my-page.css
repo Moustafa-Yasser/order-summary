@@ -149,6 +149,7 @@ button.cancel:hover {
     }
     img.mou {
         width: 300px;
+        height: 100%;
         margin-left: 26px;
     }
     p {
