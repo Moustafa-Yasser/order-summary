@@ -21,7 +21,7 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
   line-height: 1.5;
-  font-size: 14px;
+  font-size: 13px;
   background-color: $bg-body-color;
   @include center-ele;
   @include media(mobile) {
@@ -51,20 +51,18 @@ body {
     img {
       width: 100%;
     }
-    h2 {
+    h1 {
       color: $heading-color;
       font-weight: 900;
       text-align: center;
       margin: 20px 0 8px;
+      @include media(mobile) {
+        font-size: 20px;
+      }
     }
     p {
       color: $p-color;
-      @include media(mobile) {
-        width: 90%;
-      }
-      @include media(desktop) {
-        width: 90%;
-      }
+      width: 75%;
       text-align: center;
       margin: auto;
     }
@@ -130,7 +128,7 @@ body {
       :last-child {
         color: $p-color;
         margin-bottom: 20px;
-        // transition: all 1s ease;
+        margin-top: 10px;
         @include hover(0.5s, $heading-color, transparent);
       }
     }

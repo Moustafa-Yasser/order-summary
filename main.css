@@ -11,7 +11,7 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
   line-height: 1.5;
-  font-size: 14px;
+  font-size: 13px;
   background-color: #e0e8ff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -58,26 +58,22 @@ body {
 .container .upper-case img {
   width: 100%;
 }
-.container .upper-case h2 {
+.container .upper-case h1 {
   color: #1f2f56;
   font-weight: 900;
   text-align: center;
   margin: 20px 0 8px;
 }
+@media screen and (max-width: 375px) {
+  .container .upper-case h1 {
+    font-size: 20px;
+  }
+}
 .container .upper-case p {
   color: #7280a7;
+  width: 75%;
   text-align: center;
   margin: auto;
-}
-@media screen and (max-width: 375px) {
-  .container .upper-case p {
-    width: 90%;
-  }
-}
-@media screen and (min-width: 376px) and (max-width: 1440px) {
-  .container .upper-case p {
-    width: 90%;
-  }
 }
 .container .lower-case {
   display: grid;
@@ -174,6 +170,7 @@ body {
 .container .lower-case .buttons :last-child {
   color: #7280a7;
   margin-bottom: 20px;
+  margin-top: 10px;
 }
 .container .lower-case .buttons :last-child {
   -webkit-transition-duration: 0.5s;
