@@ -35,13 +35,12 @@ body {
 .container {
   display: grid;
   justify-content: center;
-  // align-items: center;
   background-color: $bg-container-color;
   border-radius: 10px;
   overflow: hidden;
   @include media(desktop) {
     width: 350px;
-    scale: 1.22222;
+    scale: 1.26;
   }
   @include media(mobile) {
     width: 300px;
@@ -82,11 +81,15 @@ body {
       .left {
         display: flex;
         gap: 20px;
+        align-items: end;
       }
       .icon {
         background-color: $bg-body-color;
         @include circle;
         @include center-ele;
+        img {
+          width: 40px;
+        }
       }
       .price {
         display: grid;
@@ -103,6 +106,7 @@ body {
         text-decoration: underline;
         font-weight: bold;
         cursor: pointer;
+        font-size: 11px;
         @include hover(0.5s, hsla(245, 75%, 52%, 0.631), transparent) {
           text-decoration: none;
         }
@@ -116,7 +120,7 @@ body {
         background-color: transparent;
         font-weight: 900;
         padding: 10px 20px;
-        margin: 0 0 10px;
+        margin: 10px 0;
         cursor: pointer;
       }
       :first-child {
