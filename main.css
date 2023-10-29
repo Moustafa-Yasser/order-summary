@@ -11,8 +11,8 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
   line-height: 1.5;
+  font-size: 14px;
   background-color: #e0e8ff;
-  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -22,6 +22,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  min-height: 100vh;
 }
 @media screen and (max-width: 375px) {
   body {
@@ -46,7 +47,7 @@ body {
 @media screen and (min-width: 376px) and (max-width: 1440px) {
   .container {
     width: 350px;
-    scale: 1.2;
+    scale: 1.22222;
   }
 }
 @media screen and (max-width: 375px) {
@@ -61,7 +62,7 @@ body {
   color: #1f2f56;
   font-weight: 900;
   text-align: center;
-  margin: 20px 0;
+  margin: 20px 0 8px;
 }
 .container .upper-case p {
   color: #7280a7;
@@ -95,7 +96,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 40px;
+  gap: 60px;
   border-radius: 10px;
   margin: 25px 0;
 }
@@ -135,7 +136,6 @@ body {
   text-decoration: underline;
   font-weight: bold;
   cursor: pointer;
-  font-size: 15px;
 }
 .container .lower-case .info-product .btn {
   -webkit-transition-duration: 0.5s;

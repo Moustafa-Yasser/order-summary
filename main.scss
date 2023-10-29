@@ -21,7 +21,9 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
   line-height: 1.5;
+  font-size: 14px;
   background-color: $bg-body-color;
+  @include center-ele;
   @include media(mobile) {
     background-image: url($main-image-bg-mob);
   }
@@ -29,7 +31,6 @@ body {
     background-image: url($main-image-bg-desk);
   }
   min-height: 100vh;
-  @include center-ele;
 }
 .container {
   display: grid;
@@ -40,7 +41,7 @@ body {
   overflow: hidden;
   @include media(desktop) {
     width: 350px;
-    scale: 1.2;
+    scale: 1.22222;
   }
   @include media(mobile) {
     width: 300px;
@@ -54,7 +55,7 @@ body {
       color: $heading-color;
       font-weight: 900;
       text-align: center;
-      margin: 20px 0;
+      margin: 20px 0 8px;
     }
     p {
       color: $p-color;
@@ -77,7 +78,7 @@ body {
       background-color: #e8e9ef73;
       padding: 15px 0px;
       @include center-ele;
-      gap: 40px;
+      gap: 60px;
       border-radius: 10px;
       margin: 25px 0;
       .left {
@@ -104,7 +105,6 @@ body {
         text-decoration: underline;
         font-weight: bold;
         cursor: pointer;
-        font-size: 15px;
         @include hover(0.5s, hsla(245, 75%, 52%, 0.631), transparent) {
           text-decoration: none;
         }
