@@ -40,7 +40,7 @@ body {
   overflow: hidden;
   @include media(desktop) {
     width: 350px;
-    scale: 1.122;
+    scale: 1.2;
   }
   @include media(mobile) {
     width: 300px;
