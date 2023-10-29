@@ -1,0 +1,144 @@
+@import "./Helper/mixins.scss";
+
+$link-google-font: "https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap";
+$font-family: "Red Hat Display", sans-serif;
+$bg-body-color: hsl(225, 100%, 94%);
+$bg-container-color: hsl(225, 100%, 98%);
+$button-color: hsl(245, 75%, 52%);
+$p-color: hsl(224, 23%, 55%);
+$heading-color: hsl(223, 47%, 23%);
+$main-image-bg-desk: "./images/pattern-background-desktop.svg";
+$main-image-bg-mob: "./images/pattern-background-mobile.svg";
+
+@import url($link-google-font);
+
+* {
+  @include rest-ele;
+}
+
+body {
+  font-family: $font-family;
+  background-repeat: no-repeat;
+  background-size: contain;
+  line-height: 1.5;
+  background-color: $bg-body-color;
+  @include media(mobile) {
+    background-image: url($main-image-bg-mob);
+  }
+  @include media(desktop) {
+    background-image: url($main-image-bg-desk);
+  }
+  min-height: 100vh;
+  @include center-ele;
+}
+.container {
+  display: grid;
+  justify-content: center;
+  // align-items: center;
+  background-color: $bg-container-color;
+  border-radius: 10px;
+  overflow: hidden;
+  @include media(desktop) {
+    width: 350px;
+  }
+  @include media(mobile) {
+    width: 300px;
+  }
+
+  .upper-case {
+    img {
+      width: 100%;
+    }
+    h2 {
+      color: $heading-color;
+      font-weight: 900;
+      text-align: center;
+      margin: 20px 0;
+    }
+    p {
+      color: $p-color;
+      @include media(mobile) {
+        width: 90%;
+      }
+      @include media(desktop) {
+        width: 90%;
+      }
+      text-align: center;
+      margin: auto;
+    }
+  }
+  .lower-case {
+    display: grid;
+    width: 90%;
+    margin: auto;
+
+    .info-product {
+      background-color: #e8e9ef73;
+      padding: 15px 0px;
+      @include center-ele;
+      gap: 40px;
+      border-radius: 10px;
+      margin: 25px 0;
+      .left {
+        display: flex;
+        gap: 20px;
+      }
+      .icon {
+        background-color: $bg-body-color;
+        @include circle;
+        @include center-ele;
+      }
+      .price {
+        display: grid;
+        :first-child {
+          color: $heading-color;
+          font-weight: 900;
+        }
+        :last-child {
+          color: $p-color;
+        }
+      }
+      .btn {
+        color: $button-color;
+        text-decoration: underline;
+        font-weight: bold;
+        cursor: pointer;
+        font-size: 15px;
+        @include hover(0.5s, hsla(245, 75%, 52%, 0.631), transparent) {
+          text-decoration: none;
+        }
+      }
+    }
+    .buttons {
+      display: grid;
+      button {
+        border: none;
+        font-family: inherit;
+        background-color: transparent;
+        font-weight: 900;
+        padding: 10px 20px;
+        margin: 0 0 10px;
+        cursor: pointer;
+      }
+      :first-child {
+        color: $bg-container-color;
+        background-color: $button-color;
+        border-radius: 10px;
+        @include hover(0.5s, $bg-container-color, hsla(245, 75%, 52%, 0.631));
+      }
+      :last-child {
+        color: $p-color;
+        margin-bottom: 20px;
+        // transition: all 1s ease;
+        @include hover(0.5s, $heading-color, transparent);
+      }
+    }
+  }
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  padding: 20px;
+  font-weight: bold;
+}

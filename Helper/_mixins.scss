@@ -1,0 +1,41 @@
+@mixin rest-ele {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@mixin media($size) {
+  @if $size == "mobile" {
+    @media screen and (max-width: 375px) {
+      & {
+        @content;
+      }
+    }
+  } @else if $size == "desktop" {
+    @media screen and (min-width: 376px) and (max-width: 1440px) {
+      & {
+        @content;
+      }
+    }
+  }
+}
+@mixin center-ele {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin circle($width: auto, $height: auto) {
+  width: $width;
+  height: $height;
+  border-radius: 50%;
+}
+@mixin hover($time: 0.5s, $color: red, $back: blue) {
+  & {
+    transition-duration: $time;
+  }
+  &:hover {
+    color: $color;
+    background-color: $back;
+    @content;
+  }
+}
