@@ -35,7 +35,7 @@ body {
 .container {
   display: grid;
   justify-content: center;
-  background-color: $bg-container-color;
+  background-color: #fff;
   border-radius: 10px;
   overflow: hidden;
   @include media(desktop) {
@@ -50,7 +50,7 @@ body {
     img {
       width: 100%;
     }
-    h1 {
+    h2 {
       color: $heading-color;
       font-weight: 900;
       text-align: center;
@@ -72,7 +72,7 @@ body {
     margin: auto;
 
     .info-product {
-      background-color: #e8e9ef73;
+      background-color: $bg-container-color;
       padding: 15px 0px;
       @include center-ele;
       gap: 60px;
